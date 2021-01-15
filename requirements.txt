@@ -1,0 +1,4 @@
+aliyun-python-sdk-core==2.13.30
+aliyun-python-sdk-rds==2.5.4
+requests==2.25.1
+
