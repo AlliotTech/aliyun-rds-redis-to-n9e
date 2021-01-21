@@ -6,3 +6,7 @@
 ``` 
 pip3 install -r requirements.txt
 ```
+
+
+
+~~改成一次 push 所有 matric 而不是单独循环 push,新增Redis指标获取 ~~ 
