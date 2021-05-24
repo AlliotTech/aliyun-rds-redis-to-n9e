@@ -14,7 +14,7 @@ RegionID = sys.argv[1]
 Step = 60
 # DBInstanceID = ""         实例ID
 DBInstanceID = sys.argv[2]
-MasterKey = "MemoryUsage,UsedQPS,QPSUsage,Hit_Rate_Monitor,CpuUsage"
+MasterKey = "MemoryUsage,UsedQPS,QPSUsage,Hit_Rate_Monitor,CpuUsage,IntranetOutRatio,IntranetInRatio"
 
 
 # 新建AcsClient
