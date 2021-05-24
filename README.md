@@ -1,5 +1,6 @@
 # aliyunrds-to-n9e
-获取所有阿里云上的RDS实例，并将性能数据推送至n9e监控平台  
+获取阿里云上的RDS实例性能数据推送至n9e监控平台（夜莺监控 https://github.com/didi/nightingale）  
+兼容open-falcon
 
 ``` 
 pip3 install -r requirements.txt
