@@ -51,14 +51,18 @@ def GetPerformance(DBInstanceID, MasterKey):
     MetricToValue = dict()
     for i in Value:
         a = dict()
-        if "&" in str(i):
+        if "&" in str(i) and len(i["Values"]["PerformanceValue"]) >= 1:
             vf = i["ValueFormat"].split('&')
             vl = i["Values"]["PerformanceValue"][0]["Value"].split('&')
             l = len(vf)
             while l != 0:
                 l -= 1
                 a[vf[l]] = vl[l]
-        else:
+        elif len(i["Values"]["PerformanceValue"]) == 0:
+            # 过滤数值为空的指标
+            print(f"实例{DBInstanceID}如下性能指标无法获取:{i}")
+            continue
+        elif "&" not in str(i):
             a[i['ValueFormat']] = i['Values']['PerformanceValue'][0]['Value']
         MetricToValue.update(a)
     return MetricToValue
